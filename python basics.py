@@ -75,3 +75,5 @@ merged.columns = ['Tata Motors', 'Nifty50']
 
 print("Correlation between Tata Motors and Nifty50:", merged.corr().iloc[0,1])
 
+tata['MA50'] = tata['Adj Close'].rolling(50).mean()
+tata['MA200'] = tata['Adj Close'].rolling(200).mean()
